@@ -1,0 +1,90 @@
+body {
+  margin: 0px;
+  background: #eee url('../img/bg.png') repeat center center;
+}
+#app {
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  
+  font-family: 'Roboto', '黑體-繁', '微軟正黑體', sans-serif;
+}
+.receipt {
+  display: block;
+  
+  border: 1px #666 solid;
+  width: 250px;
+  min-height: 450px;
+  
+  padding: 10px 25px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  .title-block {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .logo {
+    display: block;
+
+    width: 80px;
+    height: 57px;
+
+    background-image: url('../img/logo.png');
+    
+    margin: 0px auto;
+  }
+  .title, .date {
+    font-size: 1.5em;
+  }
+  .winning-num {
+    margin-bottom: 10px;
+    .special-thousand, .special-hundred, .firstprize {
+      border-bottom: 1px solid #666;
+    }
+    .prize-type {
+      font-size: 0.5em;
+    }
+    .prize-num {
+      font-size: 1.8em;
+      text-align: center;
+      margin: 0px;
+      color: #FF6F6F;
+    }
+  }
+  .barcode {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .qrcode {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .qr1, .qr2 {
+      display: flex;
+      justify-content: center;
+
+      width: 50%;
+    }
+  }
+}
+.awards {
+  margin-top: 110px;
+  margin-left: 20px;
+
+  font-size: 1em;
+  p {
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+}

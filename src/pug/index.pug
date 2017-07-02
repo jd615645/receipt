@@ -1,0 +1,44 @@
+extends layout
+block style
+  link(rel='stylesheet', href='./styles/main.css')
+block content
+  #app(v-cloak)
+    .receipt
+      .title-block
+        .logo
+        .title
+          | 統一發票對獎
+        .date
+          | 106 年 03-04 月
+      .winning-num
+        .special-thousand
+          .prize-type 特別獎
+          p.prize-num {{ awards[0]['specialThousand'] }}
+        .special-hundred
+          .prize-type 特獎
+          p.prize-num {{ awards[0]['specialHundred'] }}
+        .firstprize
+          .prize-type 頭獎
+          p.prize-num(v-for="award in awards[0]['firstprize']") {{ award }}
+        .sixprize
+          .prize-type 增開六獎
+          p.prize-num(v-for="award in awards[0]['sixprize']") {{ award }}
+
+      .footer-block
+        .barcode
+          img(src='../img/barcode.gif')
+        .qrcode
+          .qr1
+            img(src='../img/qr1.png')
+          .qr2
+            img(src='../img/qr2.png')
+    .awards
+      p 8位數相同: 20萬元
+      p 7位數相同: 4萬元
+      p 6位數相同: 1萬元
+      p 5位數相同: 4000元
+      p 4位數相同: 1000元
+      p 3位數相同: 200元
+
+block append js
+  script(src='./js/main.js')
